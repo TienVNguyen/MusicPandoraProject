@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016. Self Training Systems, Inc - All Rights Reserved
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited
+  ~ Proprietary and confidential
+  ~ Written by TienNguyen <tien.workinfo@gmail.com - tien.workinfo@icloud.com>, October 2015
+  -->
+
+<resources>
+    <string name="app_name">Hộp Âm Nhạc</string>
+    <string name="txt_album">Album</string>
+    <string name="txt_song">Bài hát</string>
+    <string name="txt_no_song">Không tồn tại ca khúc nào</string>
+    <string name="img_describe">Hình ảnh</string>
+    <string name="txt_1_song_link">Trang web</string>
+</resources>

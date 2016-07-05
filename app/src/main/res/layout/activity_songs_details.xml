@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016. Self Training Systems, Inc - All Rights Reserved
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited
+  ~ Proprietary and confidential
+  ~ Written by TienNguyen <tien.workinfo@gmail.com - tien.workinfo@icloud.com>, October 2015
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RelativeLayoutBasic"
+
+    tools:context=".SongDetailsActivity">
+
+    <ImageView
+        android:id="@+id/img_1_song"
+        style="@style/ImageViewForRelativeLayout"
+        android:contentDescription="@string/img_describe"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txt_1_song_name"
+        style="@style/TextViewForRelativeLayout"
+        android:layout_toRightOf="@id/img_1_song"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_1_song_singer"
+        style="@style/TextViewForRelativeLayout"
+        android:layout_below="@id/txt_1_song_name"
+        android:layout_toRightOf="@id/img_1_song" />
+
+    <TextView
+        android:id="@+id/txt_1_song_link"
+        style="@style/TextLinkForRelativeLayout"
+        android:layout_below="@id/txt_1_song_singer"
+        android:layout_toRightOf="@id/img_1_song"
+        android:text="@string/txt_1_song_link" />
+
+    <TextView
+        android:id="@+id/txt_1_song_description"
+        style="@style/TextViewForRelativeLayout"
+        android:layout_below="@id/img_1_song" />
+</RelativeLayout>
