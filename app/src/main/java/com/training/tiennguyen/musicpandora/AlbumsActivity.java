@@ -10,6 +10,8 @@ package com.training.tiennguyen.musicpandora;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.training.tiennguyen.musicpandora.adapter.AlbumsAdapter;
@@ -22,7 +24,6 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnItemClick;
 
 /**
  * AlbumsActivity
@@ -51,9 +52,22 @@ public class AlbumsActivity extends AppCompatActivity {
         albumList = AlbumsData.getAlbumsList();
         AlbumsAdapter albumsAdapter = new AlbumsAdapter(this, albumList);
         lvAlbum.setAdapter(albumsAdapter);
+
+        lvAlbum.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Album album = albumList.get(i);
+
+                if (album != null) {
+                    Intent intent = new Intent(getApplicationContext(), SongsActivity.class);
+                    intent.putExtra(VariableConstants.INTENT_ALBUM_NAME, album.getName());
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
-    @OnItemClick(R.id.lv_album)
+   /* @OnItemClick(R.id.lv_album)
     protected void onItemClickedAlbum(int position) {
         Album album = albumList.get(position);
 
@@ -62,5 +76,5 @@ public class AlbumsActivity extends AppCompatActivity {
             intent.putExtra(VariableConstants.INTENT_ALBUM_NAME, album.getName());
             startActivity(intent);
         }
-    }
+    }*/
 }

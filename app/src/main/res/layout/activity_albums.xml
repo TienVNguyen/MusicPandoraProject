@@ -12,11 +12,25 @@
     android:orientation="vertical"
     tools:context=".AlbumsActivity">
 
-    <TextView
-        style="@style/TextViewBasic"
-        android:text="@string/txt_album"
-        android:textAllCaps="true"
-        android:textColor="@color/colorPrimary" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewBasic"
+            android:text="@string/txt_album"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            style="@style/TextViewBasic"
+            android:text="@string/txt_album_choose"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="italic" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/lv_album"

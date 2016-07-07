@@ -8,8 +8,11 @@
 <resources>
     <string name="app_name">Hộp Âm Nhạc</string>
     <string name="txt_album">Album</string>
+    <string name="txt_album_choose">Xin chọn 1 cuốn Album dưới đây</string>
     <string name="txt_song">Bài hát</string>
+    <string name="txt_song_choose">Xin chọn 1 bài hátt dưới đây</string>
     <string name="txt_no_song">Không tồn tại ca khúc nào</string>
     <string name="img_describe">Hình ảnh</string>
     <string name="txt_1_song_link">Trang web</string>
+    <string name="txt_details_title">Chi tiết ca khúc</string>
 </resources>

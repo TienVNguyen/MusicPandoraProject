@@ -8,8 +8,11 @@
 <resources>
     <string name="app_name">Music Pandora</string>
     <string name="txt_album">Album</string>
+    <string name="txt_album_choose">Please choose an Album as below</string>
     <string name="txt_song">Song</string>
+    <string name="txt_song_choose">Please choose an Song as below</string>
     <string name="txt_no_song">No Song</string>
     <string name="img_describe">Image</string>
     <string name="txt_1_song_link">Link</string>
+    <string name="txt_details_title">Song\'s Detail</string>
 </resources>

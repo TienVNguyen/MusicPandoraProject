@@ -21,7 +21,6 @@ import com.training.tiennguyen.musicpandora.utils.ImageUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * SongDetailsActivity
@@ -37,6 +36,8 @@ public class SongDetailsActivity extends AppCompatActivity {
     protected TextView txtSongSinger;
     @Bind(R.id.txt_1_song_description)
     protected TextView txtSongDescription;
+    @Bind(R.id.txt_1_song_link)
+    protected TextView txtSongLink;
     private String songLink;
     private MediaPlayer mPlayer;
 
@@ -60,10 +61,20 @@ public class SongDetailsActivity extends AppCompatActivity {
             txtSongSinger.setText(intent.getStringExtra(VariableConstants.INTENT_SONG_SINGER));
             txtSongDescription.setText(intent.getStringExtra(VariableConstants.INTENT_SONG_DESCRIPTION));
             songLink = intent.getStringExtra(VariableConstants.INTENT_SONG_URL);
+            txtSongLink.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String url = songLink;
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url.toLowerCase()));
+                    startActivity(i);
+                }
+            });
+
             ImageUtils.setImage(this, intent.getStringExtra(VariableConstants.INTENT_SONG_IMG), 400, 400, imgSong);
 
             String media = intent.getStringExtra(VariableConstants.INTENT_SONG_MEDIA);
-            if (media != null & media.length() > 0) {
+            if (media != null) {
                 int resID = this.getResources().getIdentifier(
                         media,
                         "raw",
@@ -75,7 +86,7 @@ public class SongDetailsActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.txt_1_song_link)
+    /*@OnClick(R.id.txt_1_song_link)
     protected void onClickLink(View view) {
         if (songLink != null) {
             String url = songLink;
@@ -83,7 +94,7 @@ public class SongDetailsActivity extends AppCompatActivity {
             i.setData(Uri.parse(url.toLowerCase()));
             startActivity(i);
         }
-    }
+    }*/
 
     @Override
     protected void onDestroy() {

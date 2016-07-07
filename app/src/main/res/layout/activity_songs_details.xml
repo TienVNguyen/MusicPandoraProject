@@ -8,18 +8,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/RelativeLayoutBasic"
-
     tools:context=".SongDetailsActivity">
+
+    <TextView
+        android:id="@+id/txt_details_title"
+        style="@style/TextViewBasic"
+        android:background="@color/colorGrey"
+        android:text="@string/txt_details_title"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
 
     <ImageView
         android:id="@+id/img_1_song"
         style="@style/ImageViewForRelativeLayout"
+        android:layout_below="@id/txt_details_title"
         android:contentDescription="@string/img_describe"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/txt_1_song_name"
         style="@style/TextViewForRelativeLayout"
+        android:layout_below="@id/txt_details_title"
         android:layout_toRightOf="@id/img_1_song"
         android:textStyle="bold" />
 

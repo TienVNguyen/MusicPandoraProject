@@ -8,8 +8,11 @@
 <resources>
     <string name="app_name">音楽 パンドラ</string>
     <string name="txt_album">アルバム</string>
+    <string name="txt_album_choose">以下のようにアルバムを選択してください</string>
     <string name="txt_song">ソング</string>
+    <string name="txt_song_choose">以下のように曲を選択してください</string>
     <string name="txt_no_song">いいえソングません</string>
     <string name="img_describe">画像</string>
     <string name="txt_1_song_link">リンク</string>
+    <string name="txt_details_title">曲の詳細</string>
 </resources>
