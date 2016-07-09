@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
 
 /**
@@ -33,6 +34,8 @@ import butterknife.ButterKnife;
 public class AlbumsActivity extends AppCompatActivity {
     @Bind(R.id.lv_album)
     protected ListView lvAlbum;
+    @BindString(R.string.txt_album)
+    protected String txtAlbum;
     private List<Album> albumList = new ArrayList<>();
 
     @Override
@@ -48,6 +51,8 @@ public class AlbumsActivity extends AppCompatActivity {
      */
     private void initView() {
         ButterKnife.bind(this);
+
+        setTitle(txtAlbum);
 
         albumList = AlbumsData.getAlbumsList();
         AlbumsAdapter albumsAdapter = new AlbumsAdapter(this, albumList);
@@ -66,15 +71,4 @@ public class AlbumsActivity extends AppCompatActivity {
             }
         });
     }
-
-   /* @OnItemClick(R.id.lv_album)
-    protected void onItemClickedAlbum(int position) {
-        Album album = albumList.get(position);
-
-        if (album != null) {
-            Intent intent = new Intent(this, SongsActivity.class);
-            intent.putExtra(VariableConstants.INTENT_ALBUM_NAME, album.getName());
-            startActivity(intent);
-        }
-    }*/
 }

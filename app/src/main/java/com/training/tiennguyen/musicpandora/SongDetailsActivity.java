@@ -20,6 +20,7 @@ import com.training.tiennguyen.musicpandora.constant.VariableConstants;
 import com.training.tiennguyen.musicpandora.utils.ImageUtils;
 
 import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
 
 /**
@@ -38,6 +39,8 @@ public class SongDetailsActivity extends AppCompatActivity {
     protected TextView txtSongDescription;
     @Bind(R.id.txt_1_song_link)
     protected TextView txtSongLink;
+    @BindString(R.string.txt_details_title)
+    protected String txtDetailsTitle;
     private String songLink;
     private MediaPlayer mPlayer;
 
@@ -54,6 +57,8 @@ public class SongDetailsActivity extends AppCompatActivity {
      */
     private void initView() {
         ButterKnife.bind(this);
+
+        setTitle(txtDetailsTitle);
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -85,16 +90,6 @@ public class SongDetailsActivity extends AppCompatActivity {
             }
         }
     }
-
-    /*@OnClick(R.id.txt_1_song_link)
-    protected void onClickLink(View view) {
-        if (songLink != null) {
-            String url = songLink;
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url.toLowerCase()));
-            startActivity(i);
-        }
-    }*/
 
     @Override
     protected void onDestroy() {

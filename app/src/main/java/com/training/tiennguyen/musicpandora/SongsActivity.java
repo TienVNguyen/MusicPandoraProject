@@ -33,16 +33,16 @@ import butterknife.ButterKnife;
  * @author TienNguyen
  */
 public class SongsActivity extends AppCompatActivity {
-    @Bind(R.id.txt_songs)
-    protected TextView txtSongs;
     @Bind(R.id.txt_songs_describe)
     protected TextView txtSongsDescribe;
     @Bind(R.id.lv_songs)
     protected ListView lvSongs;
-    @BindString(R.string.txt_song)
+    @BindString(R.string.txt_song_choose)
     protected String existSongs;
     @BindString(R.string.txt_no_song)
     protected String noSong;
+    @BindString(R.string.txt_song)
+    protected String txtSong;
     private List<Song> songList = new ArrayList<>();
 
     @Override
@@ -59,6 +59,8 @@ public class SongsActivity extends AppCompatActivity {
     private void initView() {
         ButterKnife.bind(this);
 
+        setTitle(txtSong);
+
         Intent intent = getIntent();
         String albumName = intent.getStringExtra(VariableConstants.INTENT_ALBUM_NAME);
         songList = SongsData.getSongsList(albumName);
@@ -68,8 +70,7 @@ public class SongsActivity extends AppCompatActivity {
                 SongsAdapter songsAdapter = new SongsAdapter(this, songList);
                 lvSongs.setAdapter(songsAdapter);
                 lvSongs.setVisibility(View.VISIBLE);
-                txtSongs.setText(existSongs);
-                txtSongsDescribe.setVisibility(View.VISIBLE);
+                txtSongsDescribe.setText(existSongs);
 
                 lvSongs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -91,30 +92,11 @@ public class SongsActivity extends AppCompatActivity {
                 });
             } else {
                 lvSongs.setVisibility(View.GONE);
-                txtSongs.setText(noSong);
-                txtSongsDescribe.setVisibility(View.GONE);
+                txtSongsDescribe.setText(noSong);
             }
         } else {
             lvSongs.setVisibility(View.GONE);
-            txtSongs.setText(noSong);
-            txtSongsDescribe.setVisibility(View.GONE);
+            txtSongsDescribe.setText(noSong);
         }
     }
-
-    /*@OnItemClick(R.id.lv_songs)
-    protected void onItemClickedSong(int position) {
-        Song song = songList.get(position);
-
-        if (song != null) {
-            Intent intent = new Intent(this, SongDetailsActivity.class);
-            intent.putExtra(VariableConstants.INTENT_SONG_NAME, song.getName());
-            intent.putExtra(VariableConstants.INTENT_SONG_SINGER, song.getSinger());
-            intent.putExtra(VariableConstants.INTENT_SONG_IMG, song.getImg());
-            intent.putExtra(VariableConstants.INTENT_SONG_MEDIA, song.getMedia());
-            intent.putExtra(VariableConstants.INTENT_SONG_URL, song.getUrl());
-            intent.putExtra(VariableConstants.INTENT_SONG_ALBUM, song.getAlbum());
-            intent.putExtra(VariableConstants.INTENT_SONG_DESCRIPTION, song.getDescription());
-            startActivity(intent);
-        }
-    }*/
 }

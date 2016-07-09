@@ -20,12 +20,6 @@
 
         <TextView
             style="@style/TextViewBasic"
-            android:text="@string/txt_album"
-            android:textAllCaps="true"
-            android:textColor="@color/colorPrimary" />
-
-        <TextView
-            style="@style/TextViewBasic"
             android:text="@string/txt_album_choose"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
