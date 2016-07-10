@@ -8,11 +8,12 @@
 <resources>
     <string name="app_name">Hộp Âm Nhạc</string>
     <string name="txt_album">Album</string>
-    <string name="txt_album_choose">Xin chọn 1 cuốn Album dưới đây</string>
+    <string name="txt_album_description">Khi mở ứng dụng, một danh sách album sẽ xuất hiện. Khi đó bạn có thể chọn bất kì loại album nào để đi vào các ca khúc bên trong.</string>
     <string name="txt_song">Bài hát</string>
-    <string name="txt_song_choose">Xin chọn 1 bài hátt dưới đây</string>
+    <string name="txt_song_description">Sau khi chọn album, một danh sách ca khúc sẽ xuất hiện. Khi đó bạn có thể chọn cụ thể ca khúc nào để đi vào chi tiết. Nếu không có hiện danh sách, một đoạn thông tin sẽ hiện thị.</string>
     <string name="txt_no_song">Không tồn tại ca khúc nào</string>
     <string name="img_describe">Hình ảnh</string>
     <string name="txt_1_song_link">Trang web</string>
     <string name="txt_details_title">Chi tiết ca khúc</string>
+    <string name="txt_txt_song_details_description">Sau khi chọn ca khúc, trang chi tiết sẽ hiển thị. Trong trang này, bạn có thể thấy thông tin ca khúc. Có một đường link đến trang web. Nếu có cập nhật media thì ca khúc sẽ tự động chạy.</string>
 </resources>

@@ -8,11 +8,12 @@
 <resources>
     <string name="app_name">Music Pandora</string>
     <string name="txt_album">Album</string>
-    <string name="txt_album_choose">Please choose an Album as below</string>
+    <string name="txt_album_description">When you open this app, a list of albums will appears belows. In this Activity, you can choose any of type of album to go deeper into list of song.</string>
     <string name="txt_song">Song</string>
-    <string name="txt_song_choose">Please choose an Song as below</string>
+    <string name="txt_song_description">After you picked an album, a list of songs will appears belows. In this Activity, you can choose any of type of songs to go deeper into that song\'s details. If there is no song at the moment, a text will shown to acknowledge you about this.</string>
     <string name="txt_no_song">No Song</string>
     <string name="img_describe">Image</string>
     <string name="txt_1_song_link">Link</string>
     <string name="txt_details_title">Song\'s Detail</string>
+    <string name="txt_txt_song_details_description">After you opened a specific song, a details page will appear. In this Activity, you can see a clearer information of song. And there is a link for go into the website. By the way, if that song\'s media is ready, it will be loaded automatically.</string>
 </resources>

@@ -37,7 +37,7 @@ public class SongsActivity extends AppCompatActivity {
     protected TextView txtSongsDescribe;
     @Bind(R.id.lv_songs)
     protected ListView lvSongs;
-    @BindString(R.string.txt_song_choose)
+    @BindString(R.string.txt_song_description)
     protected String existSongs;
     @BindString(R.string.txt_no_song)
     protected String noSong;

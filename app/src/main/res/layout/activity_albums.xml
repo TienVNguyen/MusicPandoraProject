@@ -19,11 +19,8 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/TextViewBasic"
-            android:text="@string/txt_album_choose"
-            android:textAllCaps="true"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="italic" />
+            style="@style/TextViewDescription"
+            android:text="@string/txt_album_description" />
     </LinearLayout>
 
     <ListView

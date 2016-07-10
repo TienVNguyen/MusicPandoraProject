@@ -8,11 +8,12 @@
 <resources>
     <string name="app_name">音楽 パンドラ</string>
     <string name="txt_album">アルバム</string>
-    <string name="txt_album_choose">以下のようにアルバムを選択してください</string>
+    <string name="txt_album_description">あなたがこのアプリを開くと、アルバム意志のリストがbelowsの表示されます。このアクティビティでは、曲のリストに深く行くために、アルバムの種類のいずれかを選択することができます。</string>
     <string name="txt_song">ソング</string>
-    <string name="txt_song_choose">以下のように曲を選択してください</string>
+    <string name="txt_song_description">あなたはアルバムを選んだ後、曲のリストはなりますがbelowsの表示されます。このアクティビティでは、その歌\ \'sの詳細をより深く行くために曲のタイプのいずれかを選択することができます。現時点で曲がない場合、テキストはこれについてあなたを認めることが示されます。</string>
     <string name="txt_no_song">いいえソングません</string>
     <string name="img_describe">画像</string>
     <string name="txt_1_song_link">リンク</string>
     <string name="txt_details_title">曲の詳細</string>
+    <string name="txt_txt_song_details_description">あなたが特定の曲を開いた後、詳細ページが表示されます。このアクティビティでは、曲のより明確な情報を見ることができます。そして、ウェブサイトに行くためのリンクがあります。その曲\ \'sのメディアの準備ができている場合ちなみに、それは自動的にロードされます。</string>
 </resources>

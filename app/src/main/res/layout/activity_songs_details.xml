@@ -10,15 +10,23 @@
     style="@style/RelativeLayoutBasic"
     tools:context=".SongDetailsActivity">
 
+    <TextView
+        android:id="@+id/txt_1_song_describe"
+        style="@style/TextViewDescription"
+        android:background="@color/colorGrey"
+        android:text="@string/txt_txt_song_details_description" />
+
     <ImageView
         android:id="@+id/img_1_song"
         style="@style/ImageViewForRelativeLayout"
+        android:layout_below="@id/txt_1_song_describe"
         android:contentDescription="@string/img_describe"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/txt_1_song_name"
         style="@style/TextViewForRelativeLayout"
+        android:layout_below="@id/txt_1_song_describe"
         android:layout_toRightOf="@id/img_1_song"
         android:textStyle="bold" />
 
